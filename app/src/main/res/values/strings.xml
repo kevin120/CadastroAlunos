@@ -17,4 +17,5 @@
     <string name="cadastrar_professor">Cadastrar Professor</string>
     <string name="cadastrar_disciplina">Cadastrar Disciplina</string>
     <string name="cadastrar_turma">Cadastrar Turma</string>
+    <string name="dtCadastro">Dt. Cadastro</string>
 </resources>
