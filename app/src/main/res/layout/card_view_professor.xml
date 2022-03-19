@@ -29,7 +29,6 @@
                     android:id="@+id/edNomeProfessor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
                     android:focusable="false" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -45,7 +44,6 @@
                     android:id="@+id/edCpfProfessor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
                     android:focusable="false" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +65,6 @@
                         android:id="@+id/edDtNascProfessor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white"
                         android:focusable="false" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +79,6 @@
                         android:id="@+id/edDtContratoProfessor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white"
                         android:focusable="false" />
                 </com.google.android.material.textfield.TextInputLayout>
 

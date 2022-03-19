@@ -1,5 +1,7 @@
 package com.example.cadastroalunos.model;
 
+import androidx.annotation.NonNull;
+
 import com.orm.SugarRecord;
 
 public class Professor extends SugarRecord {
@@ -49,5 +51,11 @@ public class Professor extends SugarRecord {
 
     public void setDtNascimento(String dtNascimento) {
         this.dtNascimento = dtNascimento;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.nome;
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroDisciplinaActivity"
+    android:orientation="vertical"
+    android:id="@+id/cadastroDisciplinaAcitivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Descrição">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/edDescricaoDisciplina">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spDuracao"
+        app:ms_arrowColor="?attr/colorPrimary"
+        app:ms_floatingLabelText="@string/duracao"
+        app:ms_hint="@string/selecioneDuracao"
+        app:ms_multiline="false"
+        android:layout_margin="10dp"/>
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spProfessores"
+        app:ms_arrowColor="?attr/colorPrimary"
+        app:ms_floatingLabelText="@string/professores"
+        app:ms_hint="@string/selecioneProfessor"
+        app:ms_multiline="false"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>

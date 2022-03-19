@@ -30,8 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edRaAluno"
-            android:inputType="number"
-            android:backgroundTint="@color/white"/>
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -41,8 +40,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edNomeAluno"
-            android:backgroundTint="@color/white"/>
+            android:id="@+id/edNomeAluno" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -53,8 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edCpfAluno"
-            android:inputType="number"
-            android:backgroundTint="@color/white"/>
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -72,7 +69,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edDtNascAluno"
-                android:backgroundTint="@color/white"
                 android:onClick="selecionarData"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -85,8 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edDtMatAluno"
-                android:onClick="selecionarData"
-                android:backgroundTint="@color/white"/>
+                android:onClick="selecionarData"/>
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
