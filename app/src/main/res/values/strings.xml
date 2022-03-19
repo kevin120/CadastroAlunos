@@ -22,4 +22,8 @@
     <string name="regime">Regime</string>
     <string name="selecioneRegime">Selecione o Regime</string>
     <string name="disciplinas">Disciplinas</string>
+    <string name="duracao">Duração</string>
+    <string name="selecioneDuracao">Selecione a Duração</string>
+    <string name="professores">Professores</string>
+    <string name="selecioneProfessor">Selecione o Professor</string>
 </resources>

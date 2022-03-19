@@ -15,8 +15,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edNomeProfessor"
-            android:backgroundTint="@color/white"/>
+            android:id="@+id/edNomeProfessor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -29,7 +28,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/edCpfProfessor"
             android:inputType="number"
-            android:backgroundTint="@color/white"/>
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -47,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edDtNascProfessor"
-                android:backgroundTint="@color/white"
+
                 android:onClick="selecionarData"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -60,8 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edDtContratoProfessor"
-                android:onClick="selecionarData"
-                android:backgroundTint="@color/white"/>
+                android:onClick="selecionarData" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
