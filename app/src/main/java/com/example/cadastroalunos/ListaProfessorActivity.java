@@ -39,7 +39,6 @@ public class ListaProfessorActivity extends AppCompatActivity {
     public void atualizaListaProfessor() {
         List<Professor> listaProfessores = new ArrayList<>();
         listaProfessores = ProfessorDAO.retornaProfessores("", new String[]{}, "nome asc");
-        Log.e("PHS", "Tamanho da lista: " + listaProfessores.size());
 
         rvListaProfessores = findViewById(R.id.rvListaProfessores);
         ProfessorAdapter adapter = new ProfessorAdapter(listaProfessores, this);

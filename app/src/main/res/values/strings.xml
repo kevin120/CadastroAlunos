@@ -18,4 +18,8 @@
     <string name="cadastrar_disciplina">Cadastrar Disciplina</string>
     <string name="cadastrar_turma">Cadastrar Turma</string>
     <string name="dtCadastro">Dt. Cadastro</string>
+    <string name="descricao">Descrição</string>
+    <string name="regime">Regime</string>
+    <string name="selecioneRegime">Selecione o Regime</string>
+    <string name="disciplinas">Disciplinas</string>
 </resources>

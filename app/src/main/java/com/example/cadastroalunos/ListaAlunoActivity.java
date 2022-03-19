@@ -40,7 +40,6 @@ public class ListaAlunoActivity extends AppCompatActivity {
     public void atualizaListaAluno(){
         List<Aluno> listaAluno = new ArrayList<>();
         listaAluno = AlunoDAO.retornaAlunos("", new String[]{}, "nome asc");
-        Log.e("PHS", "Tamanho da lista: "+listaAluno.size());
 
         rvListaAlunos = findViewById(R.id.rvListaAlunos);
         AlunoAdapter adapter = new AlunoAdapter(listaAluno, this);
