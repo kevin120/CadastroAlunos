@@ -47,8 +47,6 @@ public class CadastroProfessorActivity extends AppCompatActivity {
 
         edCpfProfessor.addTextChangedListener(CpfMask.insert(edCpfProfessor));
 
-
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Cadastro Professor");
     }

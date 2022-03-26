@@ -7,6 +7,7 @@
     tools:context=".CadastroTurmaActivity">
 
     <LinearLayout
+        android:id="@+id/lnPrincipal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -43,6 +44,7 @@
             app:ms_floatingLabelText="@string/periodo"
             app:ms_hint="@string/selecionePeriodo"
             app:ms_multiline="false" />
+
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -51,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
+        android:onClick="adicionarDisciplinas"
         android:text="@string/disciplinas"
-        app:icon="@drawable/ic_add"
-        android:onClick="adicionarDisciplinas"/>
+        app:icon="@drawable/ic_add" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

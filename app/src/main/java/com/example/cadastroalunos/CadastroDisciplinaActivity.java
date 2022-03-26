@@ -1,29 +1,24 @@
 package com.example.cadastroalunos;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 
-import com.example.cadastroalunos.dao.AlunoDAO;
 import com.example.cadastroalunos.dao.DisciplinaDAO;
 import com.example.cadastroalunos.dao.ProfessorDAO;
-import com.example.cadastroalunos.model.Aluno;
 import com.example.cadastroalunos.model.Disciplina;
 import com.example.cadastroalunos.model.Professor;
 import com.example.cadastroalunos.util.Util;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import fr.ganfra.materialspinner.MaterialSpinner;
 
@@ -43,6 +38,9 @@ public class CadastroDisciplinaActivity extends AppCompatActivity {
         cadastroDisciplinaAcitivity = findViewById(R.id.cadastroDisciplinaAcitivity);
 
         iniciaSpinners();
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Cadastro Disciplina");
     }
 
     private void iniciaSpinners(){
@@ -50,7 +48,7 @@ public class CadastroDisciplinaActivity extends AppCompatActivity {
         spProfessores = findViewById(R.id.spProfessores);
 
 
-        String duracao[] = new String[]{
+        String[] duracao = new String[]{
                 "1 ano",
                 "2 anos",
                 "3 anos",
@@ -86,7 +84,7 @@ public class CadastroDisciplinaActivity extends AppCompatActivity {
             return;
         }
 
-        //Valida o campo de CPF do Aluno
+        //Valida o campo do professor
         if(spProfessores.getSelectedItem() == null){
             spProfessores.setError("Selecione o Professor!");
             spProfessores.requestFocus();

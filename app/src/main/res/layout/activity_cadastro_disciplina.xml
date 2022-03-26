@@ -43,5 +43,4 @@
         app:ms_multiline="false"
         android:layout_margin="10dp"/>
 
-
 </LinearLayout>

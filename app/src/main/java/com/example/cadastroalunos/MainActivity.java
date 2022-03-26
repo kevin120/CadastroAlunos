@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cadastrarDisciplina(View view) {
-        Intent intent = new Intent(this, CadastroDisciplinaActivity.class);
+        Intent intent = new Intent(this, ListaDisciplinaActivity.class);
         startActivity(intent);
     }
 

@@ -26,4 +26,6 @@
     <string name="selecioneDuracao">Selecione a Duração</string>
     <string name="professores">Professores</string>
     <string name="selecioneProfessor">Selecione o Professor</string>
+    <string name="disciplina">Disciplina</string>
+    <string name="professor">Professor</string>
 </resources>
