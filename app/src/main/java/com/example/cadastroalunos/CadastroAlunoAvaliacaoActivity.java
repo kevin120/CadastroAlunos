@@ -1,9 +1,5 @@
 package com.example.cadastroalunos;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,30 +7,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.cadastroalunos.dao.AvaliacaoAlunoDAO;
-import com.example.cadastroalunos.dao.DisciplinaDAO;
-import com.example.cadastroalunos.dao.DisciplinaTurmaDAO;
-import com.example.cadastroalunos.dao.ProfessorDAO;
-import com.example.cadastroalunos.dao.TurmaDAO;
-import com.example.cadastroalunos.model.Aluno;
 import com.example.cadastroalunos.model.AvaliacaoAluno;
-import com.example.cadastroalunos.model.Disciplina;
-import com.example.cadastroalunos.model.DisciplinaTurma;
-import com.example.cadastroalunos.model.Professor;
-import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.Util;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import fr.ganfra.materialspinner.MaterialSpinner;
 
 public class CadastroAlunoAvaliacaoActivity extends AppCompatActivity {
     private TextInputEditText edNota1;

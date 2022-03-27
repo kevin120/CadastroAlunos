@@ -1,12 +1,11 @@
 package com.example.cadastroalunos;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cadastroalunos.dao.AlunoDAO;
 import com.example.cadastroalunos.dao.DisciplinaDAO;

@@ -1,31 +1,23 @@
 package com.example.cadastroalunos;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintSet;
-
-import fr.ganfra.materialspinner.MaterialSpinner;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.text.PrecomputedText;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cadastroalunos.dao.AlunoDAO;
-import com.example.cadastroalunos.dao.ProfessorDAO;
 import com.example.cadastroalunos.dao.TurmaDAO;
 import com.example.cadastroalunos.model.Aluno;
-import com.example.cadastroalunos.model.Professor;
 import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.CpfMask;
 import com.example.cadastroalunos.util.Util;
@@ -33,6 +25,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import fr.ganfra.materialspinner.MaterialSpinner;
 
 public class CadastroAlunoActivity extends AppCompatActivity {
 

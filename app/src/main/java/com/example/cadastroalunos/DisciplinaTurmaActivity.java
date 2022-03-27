@@ -1,30 +1,22 @@
 package com.example.cadastroalunos;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import com.example.cadastroalunos.adapters.AlunoAdapter;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.cadastroalunos.adapters.DisciplinaTurmaAdapter;
-import com.example.cadastroalunos.dao.AlunoDAO;
-import com.example.cadastroalunos.dao.DisciplinaDAO;
-import com.example.cadastroalunos.dao.TurmaDAO;
-import com.example.cadastroalunos.model.Aluno;
 import com.example.cadastroalunos.model.Disciplina;
-import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.Util;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DisciplinaTurmaActivity extends AppCompatActivity {

@@ -1,22 +1,18 @@
 package com.example.cadastroalunos;
 
-import androidx.annotation.NonNull;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.cadastroalunos.adapters.AlunoAdapter;
 import com.example.cadastroalunos.dao.AlunoDAO;
@@ -32,7 +28,6 @@ import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.RecyclerItemClickListener;
 import com.example.cadastroalunos.util.Util;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

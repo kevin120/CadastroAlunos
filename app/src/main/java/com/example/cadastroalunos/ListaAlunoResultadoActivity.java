@@ -1,13 +1,11 @@
 package com.example.cadastroalunos;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.View;
-
-import com.example.cadastroalunos.adapters.AlunoAdapter;
 import com.example.cadastroalunos.adapters.AlunoResultadoAdapter;
 import com.example.cadastroalunos.dao.AlunoDAO;
 import com.example.cadastroalunos.dao.AvaliacaoAlunoDAO;
@@ -17,7 +15,6 @@ import com.example.cadastroalunos.model.Aluno;
 import com.example.cadastroalunos.model.AvaliacaoAluno;
 import com.example.cadastroalunos.model.Disciplina;
 import com.example.cadastroalunos.model.Turma;
-import com.example.cadastroalunos.util.RecyclerItemClickListener;
 
 import java.util.List;
 
