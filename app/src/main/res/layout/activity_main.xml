@@ -30,16 +30,6 @@
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:drawableTop="@mipmap/ic_cad_aluno"
-            android:onClick="cadastrarAluno"
-            android:text="@string/cadastrar_aluno"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:drawableTop="@mipmap/ic_cad_aluno"
             android:onClick="cadastrarProfessor"
             android:text="@string/cadastrar_professor"
             android:textAlignment="center" />
@@ -54,22 +44,32 @@
             android:text="@string/cadastrar_disciplina"
             android:textAlignment="center" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/ic_cad_aluno"
+            android:onClick="cadastrarTurma"
+            android:text="@string/cadastrar_turma"
+            android:textAlignment="center" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
-        android:textAlignment="textStart">
+        android:paddingBottom="30dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingTop="10dp"
             android:drawableTop="@mipmap/ic_cad_aluno"
-            android:onClick="cadastrarTurma"
-            android:text="@string/cadastrar_turma"
+            android:onClick="cadastrarAluno"
+            android:text="@string/cadastrar_aluno"
             android:textAlignment="center" />
 
     </LinearLayout>
