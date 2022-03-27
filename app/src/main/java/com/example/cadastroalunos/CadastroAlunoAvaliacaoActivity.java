@@ -42,6 +42,7 @@ public class CadastroAlunoAvaliacaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_aluno_avaliacao);
+        setTitle("Registrar Avaliação");
 
         edNota1 = findViewById(R.id.edNota1);
         edNota2 = findViewById(R.id.edNota2);

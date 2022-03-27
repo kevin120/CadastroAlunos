@@ -30,6 +30,7 @@ public class ListaAlunoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_aluno);
+        setTitle("Listagem de Alunos");
 
         lnLista = findViewById(R.id.lnLista);
 

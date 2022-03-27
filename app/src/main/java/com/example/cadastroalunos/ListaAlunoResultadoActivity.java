@@ -25,7 +25,7 @@ public class ListaAlunoResultadoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_aluno_resultado);
-
+        setTitle("Resultados");
         atualizaListaAluno();
     }
 

@@ -30,6 +30,8 @@ public class ListaTurmaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_turma);
 
+        setTitle("Listagem de Turmas");
+
         lnLista = findViewById(R.id.lnLista);
 
         atualizaListaTurma();

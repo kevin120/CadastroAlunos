@@ -46,8 +46,7 @@ public class CadastroTurmaActivity extends AppCompatActivity {
         edDescricao = findViewById(R.id.edDescricaoTurma);
         lnPrincipal = findViewById(R.id.lnPrincipal);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Cadastro Turma");
+        setTitle("Cadastrar Turma");
 
 
         listaDisciplinas = new ArrayList<>();

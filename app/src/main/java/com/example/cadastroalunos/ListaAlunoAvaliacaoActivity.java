@@ -42,6 +42,7 @@ public class ListaAlunoAvaliacaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_aluno_avaliacao);
+        setTitle("Listagem de avaliações");
         lnListaAlunoAvaliacaoActivity = findViewById(R.id.lnListaAlunoAvaliacaoActivity);
         atualizaListaAluno();
     }

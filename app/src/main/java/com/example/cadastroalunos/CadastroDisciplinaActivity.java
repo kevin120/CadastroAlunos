@@ -39,8 +39,7 @@ public class CadastroDisciplinaActivity extends AppCompatActivity {
 
         iniciaSpinners();
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Cadastro Disciplina");
+        setTitle("Cadastrar Disciplina");
     }
 
     private void iniciaSpinners(){

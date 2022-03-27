@@ -29,6 +29,7 @@ public class ListaProfessorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_professor);
+        setTitle("Listagem de professores");
 
         lnLista = findViewById(R.id.lnLista);
 

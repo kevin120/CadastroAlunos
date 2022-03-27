@@ -51,6 +51,8 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_aluno);
 
+        setTitle("Cadastrar Aluno");
+
         edRaAluno = findViewById(R.id.edRaAluno);
         edNomeAluno = findViewById(R.id.edNomeAluno);
         edCpfAluno = findViewById(R.id.edCpfAluno);
