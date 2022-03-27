@@ -37,4 +37,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ListaTurmaActivity.class);
         startActivity(intent);
     }
+
+    public void lancarNotas(View view) {
+        Intent intent = new Intent(this, ListaAlunoAvaliacaoActivity.class);
+        startActivity(intent);
+    }
+
+    public void ConferirNotas(View view) {
+        Intent intent = new Intent(this, ListaAlunoResultadoActivity.class);
+        startActivity(intent);
+    }
 }

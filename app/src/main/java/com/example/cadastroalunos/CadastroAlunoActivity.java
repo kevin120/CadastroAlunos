@@ -3,6 +3,7 @@ package com.example.cadastroalunos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintSet;
+
 import fr.ganfra.materialspinner.MaterialSpinner;
 
 import android.app.DatePickerDialog;
@@ -21,11 +22,16 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.cadastroalunos.dao.AlunoDAO;
+import com.example.cadastroalunos.dao.ProfessorDAO;
+import com.example.cadastroalunos.dao.TurmaDAO;
 import com.example.cadastroalunos.model.Aluno;
+import com.example.cadastroalunos.model.Professor;
+import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.CpfMask;
 import com.example.cadastroalunos.util.Util;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class CadastroAlunoActivity extends AppCompatActivity {
@@ -37,12 +43,14 @@ public class CadastroAlunoActivity extends AppCompatActivity {
     private TextInputEditText edDtMatAluno;
     private MaterialSpinner spCursos;
     private MaterialSpinner spPeriodo;
+    private MaterialSpinner spTurma;
     private LinearLayout lnPrincipal;
 
     private int vAno;
     private int vMes;
     private int vDia;
     private View dataSelecionada;
+    private Turma turma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +80,10 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         vAno = calendar.get(Calendar.YEAR);
     }
 
-    private void iniciaSpinners(){
+    private void iniciaSpinners() {
         spCursos = findViewById(R.id.spCursos);
         spPeriodo = findViewById(R.id.spPeriodo);
+        spTurma = findViewById(R.id.spTurma);
 
         String cursos[] = new String[]{"Análise e Desenv. Sistemas",
                 "Administração", "Ciências Contábeis", "Direito",
@@ -83,27 +92,30 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         String periodos[] = new String[]{"1a Série",
                 "2a Série", "3a Série", "4a Série"};
 
+        ArrayList<Turma> turmas = (ArrayList<Turma>) TurmaDAO.retornaTurma(null, null, null);
+
+
         ArrayAdapter adapterCursos = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1,  cursos);
+                android.R.layout.simple_list_item_1, cursos);
         ArrayAdapter adapterPeriodo = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1,  periodos);
+                android.R.layout.simple_list_item_1, periodos);
+        ArrayAdapter adapterTurma = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, turmas);
+
 
         spCursos.setAdapter(adapterCursos);
         spPeriodo.setAdapter(adapterPeriodo);
+        spTurma.setAdapter(adapterTurma);
 
         //Ação ao selecionar o item da lista
-        spCursos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spTurma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i == 0){
+                if (i > -1) {
+                    if (turma == null)
+                        turma = new Turma();
 
-                    /*Button btADS = new Button(getBaseContext());
-                    btADS.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                             LinearLayout.LayoutParams.WRAP_CONTENT));
-                    btADS.setText("Botao ADS");
-                    btADS.setBackgroundColor(getColor(R.color.teal_200));
-
-                    llPrincipal.addView(btADS);*/
+                    turma = (Turma) adapterTurma.getItem(i);
                 }
             }
 
@@ -117,46 +129,66 @@ public class CadastroAlunoActivity extends AppCompatActivity {
     }
 
     //Validação dos campos
-    private void validaCampos(){
+    private void validaCampos() {
         //Valida o campo Ra Aluno
-        if(edRaAluno.getText().toString().equals("")){
+        if (edRaAluno.getText().toString().equals("")) {
             edRaAluno.setError("Informe o RA do Aluno!");
             edRaAluno.requestFocus();
             return;
         }
 
         //Valida o campo de nome do Aluno
-        if(edNomeAluno.getText().toString().equals("")){
+        if (edNomeAluno.getText().toString().equals("")) {
             edNomeAluno.setError("Informe o Nome do Aluno!");
             edNomeAluno.requestFocus();
             return;
         }
 
         //Valida o campo de CPF do Aluno
-        if(edCpfAluno.getText().toString().equals("")){
+        if (edCpfAluno.getText().toString().equals("")) {
             edCpfAluno.setError("Informe o CPF do Aluno!");
             edCpfAluno.requestFocus();
             return;
         }
 
-        //Valida o campo de CPF do Aluno
-        if(edDtNascAluno.getText().toString().equals("")){
+        //Valida o campo de Nascimento do Aluno
+        if (edDtNascAluno.getText().toString().equals("")) {
             edDtNascAluno.setError("Informe a data de nascimento do Aluno!");
             edDtNascAluno.requestFocus();
             return;
         }
 
-        //Valida o campo de CPF do Aluno
-        if(edDtMatAluno.getText().toString().equals("")){
+        //Valida o campo de Matricula do Aluno
+        if (edDtMatAluno.getText().toString().equals("")) {
             edDtMatAluno.setError("Informe a data de matricula do Aluno!");
             edDtMatAluno.requestFocus();
+            return;
+        }
+
+        //Valida o campo de Periodo do Aluno
+        if (spPeriodo.getSelectedItem() == null) {
+            spPeriodo.setError("Informe o Período do Aluno!");
+            spPeriodo.requestFocus();
+            return;
+        }
+        //Valida o campo de curso do Aluno
+        if (spCursos.getSelectedItem() == null) {
+            spCursos.setError("Informe o curso do Aluno!");
+            spCursos.requestFocus();
+            return;
+        }
+
+        //Valida o campo de turma do Aluno
+        if (spTurma.getSelectedItem() == null) {
+            spTurma.setError("Informe a turma do Aluno!");
+            spTurma.requestFocus();
             return;
         }
 
         salvarAluno();
     }
 
-    public void salvarAluno(){
+    public void salvarAluno() {
         Aluno aluno = new Aluno();
         aluno.setRa(Integer.parseInt(edRaAluno.getText().toString()));
         aluno.setNome(edNomeAluno.getText().toString());
@@ -165,13 +197,13 @@ public class CadastroAlunoActivity extends AppCompatActivity {
         aluno.setDtMatricula(edDtMatAluno.getText().toString());
         aluno.setCurso(spCursos.getSelectedItem().toString());
         aluno.setPeriodo(spPeriodo.getSelectedItem().toString());
-
-        if(AlunoDAO.salvar(aluno) > 0) {
+        aluno.setIdTurma(turma.getId());
+        if (AlunoDAO.salvar(aluno) > 0) {
 
             setResult(RESULT_OK);
             finish();
-        }else
-            Util.customSnackBar(lnPrincipal, "Erro ao salvar o aluno ("+aluno.getNome()+") " +
+        } else
+            Util.customSnackBar(lnPrincipal, "Erro ao salvar o aluno (" + aluno.getNome() + ") " +
                     "verifique o log", 0);
 
 
@@ -186,7 +218,7 @@ public class CadastroAlunoActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.mn_limpar:
                 //TODO: adicionar método  de limpar dados
                 limparCampos();
@@ -226,7 +258,7 @@ public class CadastroAlunoActivity extends AppCompatActivity {
             };
 
     private void atualizaData() {
-        TextInputEditText edit = (TextInputEditText)dataSelecionada;
+        TextInputEditText edit = (TextInputEditText) dataSelecionada;
         edit.setText(new StringBuilder().append(vDia).append("/")
                 .append(vMes + 1).append("/")
                 .append(vAno));

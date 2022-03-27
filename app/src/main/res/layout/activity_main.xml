@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastros"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_dark_background"
+        android:focusable="false"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,9 +54,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,4 +70,48 @@
             android:textAlignment="center" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lancamentos"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_dark_background"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_cad_aluno"
+        android:onClick="lancarNotas"
+        android:text="@string/lancar_nota"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conferencia"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_dark_background"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_cad_aluno"
+        android:onClick="ConferirNotas"
+        android:text="@string/notas"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        />
 </LinearLayout>

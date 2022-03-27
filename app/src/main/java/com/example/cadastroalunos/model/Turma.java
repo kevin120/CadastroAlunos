@@ -33,4 +33,8 @@ public class Turma extends SugarRecord {
         this.regime = regime;
     }
 
+    @Override
+    public String toString() {
+        return this.descricao;
+    }
 }

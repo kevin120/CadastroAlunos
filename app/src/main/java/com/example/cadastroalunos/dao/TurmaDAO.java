@@ -18,7 +18,7 @@ public class TurmaDAO {
         }
     }
 
-    public static Turma getTurma(int id){
+    public static Turma getTurma(Long id){
         try{
             return Turma.findById(Turma.class, id);
         }catch (Exception ex){

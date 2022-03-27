@@ -28,4 +28,20 @@
     <string name="selecioneProfessor">Selecione o Professor</string>
     <string name="disciplina">Disciplina</string>
     <string name="professor">Professor</string>
+    <string name="selecioneTurma">Selecione a turma</string>
+    <string name="turma">Turma</string>
+    <string name="lancamentos">Lançamentos</string>
+    <string name="lancar_nota">Lançar Notas</string>
+    <string name="cadastros">Cadastros</string>
+    <string name="selecioneDisciplina">Selecione a Disciplina</string>
+    <string name="nota1">Nota 1</string>
+    <string name="nota2">Nota 2</string>
+    <string name="nota3">Nota 3</string>
+    <string name="nota4">Nota 4</string>
+    <string name="frequencia">Frequência</string>
+    <string name="conferencia">Conferência</string>
+    <string name="notas">Notas</string>
+    <string name="notaMedia">Nota Média</string>
+    <string name="media">Media</string>
+    <string name="resultado">Resultado</string>
 </resources>

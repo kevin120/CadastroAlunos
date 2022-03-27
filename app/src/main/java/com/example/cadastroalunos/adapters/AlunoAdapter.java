@@ -18,6 +18,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
 
     private List<Aluno> listaAlunos;
     private Context context;
+    private View.OnClickListener clique;
 
     public AlunoAdapter(List<Aluno> listaAlunos, Context context) {
         this.listaAlunos = listaAlunos;
@@ -33,7 +34,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
         TextInputEditText edDtMatricula;
         TextInputEditText edDtNasc;
 
-        public AlunoViewHolder(@NonNull View itemView) {
+        public AlunoViewHolder(@NonNull View itemView, View.OnClickListener clique) {
             super(itemView);
 
             edRaAluno = (TextInputEditText)itemView.findViewById(R.id.edRaAluno);
@@ -44,6 +45,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
             edDtMatricula = (TextInputEditText)itemView.findViewById(R.id.edDtMatricula);
             edDtNasc = (TextInputEditText)itemView.findViewById(R.id.edDtNascAluno);
 
+            itemView.setOnClickListener(clique);
         }
     }
 
@@ -53,7 +55,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_view_aluno, parent, false);
 
-        AlunoAdapter.AlunoViewHolder viewHolder = new AlunoViewHolder(view);
+        AlunoAdapter.AlunoViewHolder viewHolder = new AlunoViewHolder(view, clique);
 
         return viewHolder;
     }
