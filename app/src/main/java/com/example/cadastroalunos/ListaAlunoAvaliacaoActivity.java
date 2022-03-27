@@ -165,6 +165,7 @@ public class ListaAlunoAvaliacaoActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
             Util.customSnackBar(lnListaAlunoAvaliacaoActivity, "Avaliação salva com sucesso!", 1);
             idDisciplina = null;
+            atualizaListaAluno();
         }
     }
 }
