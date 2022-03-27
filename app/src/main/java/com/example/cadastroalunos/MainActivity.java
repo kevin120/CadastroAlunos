@@ -11,9 +11,11 @@ import android.widget.LinearLayout;
 import com.example.cadastroalunos.dao.AlunoDAO;
 import com.example.cadastroalunos.dao.DisciplinaDAO;
 import com.example.cadastroalunos.dao.ProfessorDAO;
+import com.example.cadastroalunos.dao.TurmaDAO;
 import com.example.cadastroalunos.model.Aluno;
 import com.example.cadastroalunos.model.Disciplina;
 import com.example.cadastroalunos.model.Professor;
+import com.example.cadastroalunos.model.Turma;
 import com.example.cadastroalunos.util.Util;
 
 import java.util.List;
@@ -32,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void cadastrarAluno(View view) {
 
-        List<Aluno> alunoList =  AlunoDAO.retornaAlunos("", null, "1");
+        List<Turma> turmaList = TurmaDAO.retornaTurma("", null, "1");
 
-        if (alunoList == null || alunoList.size() == 0) {
+        if (turmaList == null || turmaList.size() == 0) {
             Util.customSnackBar(mainLayout, "Antes de cadastrar um aluno, você deve cadastrar uma turma", 0);
             return;
         }
@@ -75,6 +77,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lancarNotas(View view) {
+
+        List<Aluno> alunoList =  AlunoDAO.retornaAlunos("", null, "1");
+
+        if (alunoList == null || alunoList.size() == 0) {
+            Util.customSnackBar(mainLayout, "Antes de lanças as notas, você deve cadastrar um aluno", 0);
+            return;
+        }
+
         Intent intent = new Intent(this, ListaAlunoAvaliacaoActivity.class);
         startActivity(intent);
     }
